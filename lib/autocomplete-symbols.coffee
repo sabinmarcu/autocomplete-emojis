@@ -1,11 +1,11 @@
-provider = require('./greek-letters-provider')
+provider = require('./symbols-provider')
 
 module.exports =
   config:
-    enableUnicodeEmojis:
+    enableEmojis:
       type: 'boolean'
       default: true
-    enableMarkdownEmojis:
+    enableSymbols:
       type: 'boolean'
       default: true
 

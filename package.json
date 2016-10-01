@@ -1,17 +1,18 @@
 {
-  "name": "autocomplete-greek-letters",
-  "main": "./lib/autocomplete-greek-letters",
-  "version": "1.0.0",
-  "description": "Adds greek letters autocompletion to autocomplete+",
+  "name": "autocomplete-symbols",
+  "main": "./lib/autocomplete-symbols",
+  "version": "1.1.0",
+  "description": "Adds greek letters, emojis, etc autocompletion to autocomplete+",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/autocomplete-greek-letters"
+    "url": "https://github.com/atom/autocomplete-symbols"
   },
   "license": "MIT",
   "engines": {
     "atom": ">=0.189.0 <2.0.0"
   },
   "dependencies": {
+    "emoji-data": "^0.2.0",
     "fuzzaldrin": "^2.1.0"
   },
   "devDependencies": {
