@@ -1,6 +1,13 @@
 # autocomplete+ greek letters suggestions [![Build Status](https://travis-ci.org/atom/autocomplete-emojis.svg?branch=master)](https://travis-ci.org/atom/autocomplete-emojis)
 
+#### NOTE: Some features have been left some time to be implemented, to allow `Hacktoberfest` participants to get some easy pull requests. 
 
+![anim](./anim.gif)
+
+## Features
+
+* Makes greek letter autocompletes possible for any syntax. For instance, now that the internet is buzzing with people using emojis as JS variables, why wouldn't it be able to name `var delta = a - b` as `var Δ = a - b`?
+* More features to come.
 
 ## Acknowledgements
 
