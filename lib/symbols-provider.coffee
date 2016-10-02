@@ -26,11 +26,14 @@ module.exports =
             , {})
             @emojikeys = Object.keys(@emojimap)
 
-    getSuggestions: ({prefix}) ->
+    getSuggestions: ({prefix, scopeDescriptor}) ->
+        shouldAddEmoji = scopeDescriptor.scopes.reduce(
+            (prev, it) -> prev || (it.indexOf("comment") >= 0 || it.indexOf("string") >= 0)
+        , false)
         return [] unless prefix?.length >= 2
         return []
             .concat(@getUnicodeGreekLetterSuggestions(prefix))
-            .concat(@getUnicodeEmojiSuggestions(prefix))
+            .concat(shouldAddEmoji && @getUnicodeEmojiSuggestions(prefix) || [])
 
     getUnicodeGreekLetterSuggestions: (prefix) ->
         words = fuzzaldrin.filter(@symbolkeys, prefix)
@@ -42,8 +45,6 @@ module.exports =
                 description: "Greek Symbol"
                 type: "keyword"
             }
-
-            poo
 
     getUnicodeEmojiSuggestions: (prefix) ->
         words = fuzzaldrin.filter(@emojikeys, prefix)
